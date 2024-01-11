@@ -1,0 +1,127 @@
+:root {
+    --mainBlue: #2364AA;
+    --mainYellow:#F7B801;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ----------- BODY ----------- */
+
+body {
+    margin: 0;
+}
+
+/* ----------- TEXT ----------- */
+h1, h2, h3, h4 {
+/* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+font-family: Futura;
+font-weight: lighter;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    /* font-weight: lighter; */
+}
+
+.head1 {
+    background-color: var(--mainBlue);
+    color: white;
+}
+
+.head2 {
+    background-color: var(--mainYellow);
+}
+
+h2 {
+    background-color: var(--mainBlue);
+    color: white;
+    padding: 10px 20px 10px 40px;
+    border-radius: 0 24px 24px 0;
+    margin: 0 0 40px 0;
+    display: inline-block;
+}
+
+h3 {
+    color: var(--mainBlue);
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    margin: 12px auto 8px;
+}
+
+h4 {
+    margin: 0;
+    line-height: 150%;
+    font-size: 18px;
+}
+
+/* ----------- PICS ----------- */
+picture, img {
+    max-width:100%;
+    
+}
+.logo img, .logo source {
+    max-width:300px;
+    margin: 50px auto;
+    display: block;
+}
+
+.yellowDropShadow {
+    border-radius: 24px;
+    filter: drop-shadow(8px 8px #F7B801);
+}
+
+.profile img {
+    height: auto; 
+    width: auto; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ----------- FLEX STUFF ----------- */
+.profile {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 50px;
+    padding: 20px;
+}
+
+
+/* OPTION 1 -- Desk */
+/* .flexprof {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    align-items:flex-start;
+    justify-content:left;
+} */
+
+
+/* OPTION 2 -- Desk  */
+
+.flexprof {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items:flex-start;
+    justify-content:left;
+}
+/* .flexprof div {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 250px;
+} */
+
+@media screen and (max-width: 640px) {
+    .profile { 
+        margin: 0 auto 25px;
+    }
+}
