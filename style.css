@@ -11,10 +11,10 @@
 
 body {
     margin: 0;
-    min-height: max-content;
+    min-height: 100vh;
 }
 main {
-    min-height: 100%;
+    max-height: 100%;
     margin: 0 0 50px 0;
 }
 
@@ -77,9 +77,10 @@ h4 {
 }
 
 footer {
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     width: 100%;
+    margin: 0;
 }
 
 /* ----------- PICS ----------- */
@@ -140,6 +141,16 @@ picture, img {
     width: 0;
     min-width: 250px;
 } */
+
+
+
+@media screen and (max-width: 1500px) {
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 640px) {
     .profile { 
