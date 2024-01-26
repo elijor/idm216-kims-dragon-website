@@ -19,7 +19,7 @@ main {
 }
 
 /* ----------- TEXT ----------- */
-h1, h2, h3, p {
+h1, h2, h3, p, li {
 /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 font-family: Futura;
 font-weight: lighter;
@@ -28,7 +28,7 @@ font-weight: lighter;
 
 h1, h2.head1 {
     text-align: center;
-    font-size: 18px;
+    font-size: 36px;
     margin: 0;
     padding: 10px 0;
     border-radius: 0;
@@ -61,6 +61,7 @@ h2 {
     border-radius: 0 24px 24px 0;
     margin: 0 0 60px 0;
     display: inline-block;
+    font-size: 32px;
 }
 
 h3 {
@@ -71,7 +72,7 @@ h3 {
     margin: 12px auto 8px;
 }
 
-p {
+p, li {
     margin: 0;
     line-height: 150%;
     font-size: 18px;
@@ -83,6 +84,11 @@ footer {
     bottom: 0; */
     width: 100%;
     margin: 0;
+}
+
+footer h2 {
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* ----------- PICS ----------- */
@@ -116,18 +122,6 @@ picture, img {
     padding: 20px;
 }
 
-
-/* OPTION 1 -- Desk */
-/* .flexprof {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 20px;
-    align-items:flex-start;
-    justify-content:left;
-} */
-
-
 /* OPTION 2 -- Desk  */
 
 .flexprof {
@@ -139,13 +133,114 @@ picture, img {
     justify-content:center;
     column-gap: 10%;
 }
-/* .flexprof div {
-    flex: 1 1 0;
-    width: 0;
-    min-width: 250px;
+
+/* ----------- NEW STUFF ----------- */
+
+.elem {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.elem picture {
+    /* margin-bottom: 30px; */
+    margin: 0 auto 30px;
+    width: 100%;
+}
+
+.elem picture img, .elem picture source  { 
+    width: 100%;
+}
+
+.comp-res-wrapper {
+    /* width: 100%; */
+    margin: 0 10%;
+    padding: 30px;
+    /* border-width: 3px;
+    border-color: var(--mainBlue);
+    border-style: solid; */
+}
+
+ h3.etitle {
+    color: black;
+    /* text-align: left; */
+    padding: 0 0 0 10px;
+}
+.vis-screens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 0;
+}
+
+.vis-screens img {
+    width:20%;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    column-gap: 20px;
+}
+
+.grid-con div { 
+    padding: 10px;
+}
+
+.titlediv img {
+    margin: 0 auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: block;
+}
+
+/* .grid-con .grid-child:nth-child(2), .grid-con .grid-child:nth-child(5) {
+    border-style: solid;
+    border-width: 0 2px;
+    border-color: var(--mainYellow);
+    border-spacing: 2px;
 } */
 
+div.accusa-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:0;
+}
 
+.grid-con h3, .grid-con li, .grid-con p  {
+    text-align: left;
+}
+
+.grid-con h3 {
+    font-size: 24px;
+}
+
+.grid-con h4 {
+    font-family: Futura;
+    font-weight: bold;
+    margin: 0;
+    font-size: 20px;
+}
+
+.grid-con ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 20px;
+}
+
+.comp-res-logo {
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+.grid-child div {
+    padding: 0;
+}
 
 /* @media screen and (max-width: 1500px) {
     footer {
@@ -154,13 +249,66 @@ picture, img {
         width: 100%;
     }
 } */
+@media screen and (max-width: 1050px) {
+.comp-res-wrapper {
+    margin: 0;
+}
+}
+
+@media screen and (max-width: 870px) { 
+    div.accusa-rating svg { 
+        max-width: 140px;
+    }
+
+}
 
 @media screen and (max-width: 800px) {
     .flexprof { 
         margin: 0 5%;
     }
+    .vis-screens {
+        flex-wrap: wrap;
+    }
+
+    .vis-screens img {
+        width:45%;
+        margin-bottom: 50px;
+    }
+
+    .grid-con {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    p, li { 
+        font-size: 16px;
+    }
+    h2.head1 {
+        font-size: 24px;
+    }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 700px) { 
+    div.accusa-rating svg { 
+        max-width: 120px;
+    }
+
+}
+
+ @media screen and (max-width: 650px) {
+    .vis-screens {
+        flex-wrap: wrap;
+    }
+
+    .vis-screens img {
+        width:45%;
+    }
+
+    .grid-con {
+        grid-template-columns: 1fr;
+    }
+
+ }
+ @media screen and (max-width: 600px) {
     header > * {
         flex-basis: 100%;
     }
